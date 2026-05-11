@@ -5,15 +5,21 @@ plugins {
 	id("io.spring.dependency-management") version "1.1.7"
 }
 
+allprojects {
+	group = "com"
+	version = "0.0.1-SNAPSHOT"
+	description = "library-search"
+
+	repositories {
+		mavenCentral()
+	}
+}
+
 subprojects {
 	apply(plugin = "org.jetbrains.kotlin.jvm")
 	apply(plugin = "org.jetbrains.kotlin.plugin.spring")
 	apply(plugin = "org.springframework.boot")
 	apply(plugin = "io.spring.dependency-management")
-
-	group = "com"
-	version = "0.0.1-SNAPSHOT"
-	description = "library-search"
 
 	java {
 		toolchain {
@@ -21,9 +27,7 @@ subprojects {
 		}
 	}
 
-	repositories {
-		mavenCentral()
-	}
+
 
 	kotlin {
 		compilerOptions {
@@ -62,6 +66,6 @@ subprojects {
 	}
 
 	tasks.getByName("jar") {
-		enabled = false
+		enabled = true
 	}
 }
