@@ -1,11 +1,15 @@
 package com.library.service
 
 import com.library.repository.BookRepository
+import com.library.response.PageResult
+import com.library.response.SearchResponse
 import org.springframework.stereotype.Service
 
 @Service
 class BookQueryService(
-    val bookRepository: BookRepository
+    private val bookRepository: BookRepository
 ) {
-    fun search(query: String, page: Int, size: Int) = bookRepository.search(query, page, size)
+    fun search(query: String, page: Int, size: Int): PageResult<SearchResponse> {
+        return bookRepository.search(query, page, size)
+    }
 }

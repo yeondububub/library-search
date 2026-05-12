@@ -1,24 +1,24 @@
 package com.library.controller
 
+import com.library.request.SearchRequest
 import com.library.response.PageResult
 import com.library.response.SearchResponse
-import com.library.service.BookQueryService
+import com.library.service.BookApplicationService
+import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.ModelAttribute
 import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/v1/books")
 class BookController(
-    private val bookQueryService: BookQueryService
+    private val bookApplicationService: BookApplicationService
 ) {
     @GetMapping
     fun search(
-        @RequestParam("query") query: String,
-        @RequestParam("page") page: Int,
-        @RequestParam("size") size: Int
+        @Validated @ModelAttribute request: SearchRequest
     ): PageResult<SearchResponse> {
-        return bookQueryService.search(query, page, size)
+        return bookApplicationService.search(request.query, request.page, request.size)
     }
 }

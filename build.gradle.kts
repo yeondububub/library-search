@@ -1,6 +1,7 @@
 plugins {
 	kotlin("jvm") version "2.2.21"
 	kotlin("plugin.spring") version "2.2.21"
+	kotlin("plugin.jpa") version "2.2.21"
 	id("org.springframework.boot") version "4.0.6"
 	id("io.spring.dependency-management") version "1.1.7"
 }
@@ -18,6 +19,7 @@ allprojects {
 subprojects {
 	apply(plugin = "org.jetbrains.kotlin.jvm")
 	apply(plugin = "org.jetbrains.kotlin.plugin.spring")
+	apply(plugin = "org.jetbrains.kotlin.plugin.jpa")
 	apply(plugin = "org.springframework.boot")
 	apply(plugin = "io.spring.dependency-management")
 
@@ -49,8 +51,6 @@ subprojects {
 
 		implementation("org.springframework.boot:spring-boot-starter-webmvc")
 		implementation("tools.jackson.module:jackson-module-kotlin")
-
-		implementation("me.paulschwarz:spring-dotenv:4.0.0")
 
 		testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test")
 		testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
