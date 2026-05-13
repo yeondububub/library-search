@@ -49,6 +49,8 @@ subprojects {
 	dependencies {
 		implementation("org.jetbrains.kotlin:kotlin-reflect")
 
+		implementation("org.springframework.boot:spring-boot-h2console")
+
 		implementation("org.springframework.boot:spring-boot-starter-webmvc")
 		implementation("tools.jackson.module:jackson-module-kotlin")
 
