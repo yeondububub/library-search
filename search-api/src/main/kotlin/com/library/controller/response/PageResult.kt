@@ -1,4 +1,4 @@
-package com.library.response
+package com.library.controller.response
 
 data class PageResult<T>(
     val page: Int,

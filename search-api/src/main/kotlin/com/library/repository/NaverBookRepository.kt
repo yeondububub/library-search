@@ -1,8 +1,8 @@
 package com.library.repository
 
 import com.library.feign.NaverClient
-import com.library.response.PageResult
-import com.library.response.SearchResponse
+import com.library.controller.response.PageResult
+import com.library.controller.response.SearchResponse
 import com.library.util.parse
 import org.springframework.stereotype.Repository
 

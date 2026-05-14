@@ -1,4 +1,4 @@
-package com.library.request
+package com.library.controller.request
 
 import jakarta.validation.constraints.Max
 import jakarta.validation.constraints.Min

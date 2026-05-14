@@ -1,5 +1,6 @@
 package com.library.response
 
+import com.library.controller.response.PageResult
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 

@@ -1,9 +1,9 @@
 package com.library.controller
 
-import com.library.request.SearchRequest
-import com.library.response.PageResult
-import com.library.response.SearchResponse
-import com.library.response.StatResponse
+import com.library.controller.request.SearchRequest
+import com.library.controller.response.PageResult
+import com.library.controller.response.SearchResponse
+import com.library.controller.response.StatResponse
 import com.library.service.BookApplicationService
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
@@ -38,5 +38,11 @@ class BookController(
     ): StatResponse {
         log.info("find stats query={}, date={}", query, date)
         return bookApplicationService.findQueryCount(query, date)
+    }
+
+    @GetMapping("/stats/ranking")
+    fun findTop5Stats(): List<StatResponse> {
+        log.info("find top 5 stats")
+        return bookApplicationService.findTop5Query()
     }
 }

@@ -1,7 +1,7 @@
 package com.library.repository
 
-import com.library.response.PageResult
-import com.library.response.SearchResponse
+import com.library.controller.response.PageResult
+import com.library.controller.response.SearchResponse
 
 interface BookRepository {
 

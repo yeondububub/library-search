@@ -1,8 +1,8 @@
 package com.library.service
 
 import com.library.repository.BookRepository
-import com.library.response.PageResult
-import com.library.response.SearchResponse
+import com.library.controller.response.PageResult
+import com.library.controller.response.SearchResponse
 import org.springframework.stereotype.Service
 
 @Service
