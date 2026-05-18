@@ -1,7 +1,7 @@
 package com.library.feign
 
-import com.library.ApiException
-import com.library.ErrorType
+import com.library.exception.ApiException
+import com.library.exception.ErrorType
 import com.library.NaverErrorResponse
 import feign.Response
 import feign.codec.ErrorDecoder
