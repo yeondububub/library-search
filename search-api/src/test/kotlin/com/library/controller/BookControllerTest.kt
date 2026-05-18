@@ -1,5 +1,6 @@
 package com.library.controller
 
+import com.library.service.BookApplicationService
 import com.library.service.BookQueryService
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeEach
@@ -13,7 +14,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders
 class BookControllerTest {
 
     @Mock
-    lateinit var bookQueryService: BookQueryService
+    lateinit var bookQueryService: BookApplicationService
 
     lateinit var bookController: BookController
     lateinit var mockMvc: MockMvc

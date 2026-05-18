@@ -14,7 +14,6 @@ import java.time.LocalDateTime
 @Service
 class BookApplicationService(
     private val bookQueryService: BookQueryService,
-    private val dailyStatCommandService: DailyStatCommandService,
     private val dailyStatsQueryService: DailyStatsQueryService,
     private val eventPublisher: ApplicationEventPublisher
 ) {
